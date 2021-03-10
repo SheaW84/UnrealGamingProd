@@ -27,7 +27,24 @@ int main()
     std::cout << "The codes add up to " <<CodeSum << std::endl;
     std::cout << "The product of those same numbers equal to "<<CodeProduct <<std::endl;
 
-    int PlayerGuess;
+    int GuessA, GuessB, GuessC;
+    int GuessSum = GuessA + GuessB + GuessC;
+    int GuessProduct = GuessA * GuessB * GuessC;
+
+    std::cin >> GuessA;
+    std::cin >> GuessB;
+    std::cin >> GuessC;
+
+    if(GuessSum == CodeSum && GuessProduct == CodeProduct)
+    {
+
+       std::cout << "You Killed the Demon"; 
+    }
+     
+    else 
+    {
+        std::cout << "The demon killed you";
+    }
 
     return 0;
 }
